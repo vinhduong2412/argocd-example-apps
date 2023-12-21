@@ -24,7 +24,6 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           SecurityContext:
-            allowPrivilegeEscalation: false
             runAsUser: 0
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
