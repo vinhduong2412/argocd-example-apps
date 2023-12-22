@@ -11,9 +11,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 8888
+      targetPort: http
       protocol: TCP
-      name: 8888
+      name: http
   selector:
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
